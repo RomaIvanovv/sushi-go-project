@@ -1,0 +1,69 @@
+.post {
+    width: 31.5%;
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.post form {
+    display: flex;
+    justify-content: space-around;
+}
+.post img {
+    width: 100%;
+}
+.post p {
+    text-align: left;
+}
+.post h2 {
+    font-size: 30px;
+    font-weight: 100;
+    transition: 0.3s ease-in-out
+}
+.post span {
+    color: #686256;
+}
+.post input {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-align: center;
+    margin: 0 10px;
+}
+.post button {
+    width: 40%;
+    height: 40px;
+    color: white;
+    font-size: 20px;
+    font-family: cursive;
+    background-color: #ff6e79;
+    border: 1px solid #ff6e79;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out
+}
+.price {
+    font-size: 22px;
+}
+.countLessMore span {
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+}
+
+.post:hover {
+    border-bottom: 1px solid whitesmoke;
+    box-shadow: 1px 1px 10px 3px whitesmoke;
+}
+.post button:hover {
+    color: #ff6e79;
+    background-color: white;
+}
+.post h2:hover {
+    color: #ff6e79;
+}
+/* .post img:hover {
+    background-image: url(https://la.ua/wp-content/uploads/2021/08/california-with-salmon-hover.jpg);
+} */

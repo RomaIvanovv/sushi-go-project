@@ -1,0 +1,21 @@
+.basket:hover {
+    color: #ff6e79;
+}
+.basket {
+    color: black;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.basket div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+.basket div div {
+    margin-right: 5px;
+}
+.basket i {
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+} 

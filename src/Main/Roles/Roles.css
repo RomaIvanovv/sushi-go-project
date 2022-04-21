@@ -1,0 +1,8 @@
+.roles {
+    padding: 0 20px;
+    padding-top: 100px;
+}
+.postsFlex {
+    display: flex;
+    flex-wrap: wrap;
+}

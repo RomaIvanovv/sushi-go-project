@@ -1,0 +1,44 @@
+.postBasket {
+    border-bottom: 1px solid lightgray;
+}
+.postBasket, .postBasket div {
+    display: flex;
+    justify-content: space-between;
+}
+.postBasket img {
+    width: 60px;
+    height: 60px;
+}
+.postBasket div input[name='inputCount'] {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    text-align: center;
+    margin: 0 10px;
+    padding: 0;
+}
+.width30 {
+    width: 33%;
+    align-items: center;
+}
+.width40 {
+    width: 40%;
+    align-items: center;
+}
+.postBasket div h6 {
+    font-size: 17px;
+    font-weight: 100;
+    text-align: left;
+}
+.width30 div span {
+    font-size: 24px;
+    cursor: pointer;
+}
+.postBasket div p {
+    margin-left: 5px;
+}
+.red {
+    color: red;
+}

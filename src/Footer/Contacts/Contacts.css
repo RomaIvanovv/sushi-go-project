@@ -1,0 +1,34 @@
+.contacts img {
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.contacts p {
+    font-size: 24px;
+    transition: 0.3s ease-in-out
+}
+.contacts div:hover {
+    color: white;
+}
+.contacts div {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 100px;
+    cursor: pointer;
+}
+.contacts i {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 24px;
+    transition: 0.3s ease-in-out
+}
+.contacts a {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s ease-in-out
+}
+.contacts a:hover {
+    color: white;
+}

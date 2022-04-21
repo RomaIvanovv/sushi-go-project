@@ -1,0 +1,142 @@
+.basketYour {
+    margin: 150px 0;
+}
+.basketYour h2 {
+    font-size: 32px;
+    font-weight: 100;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    background-color: #E8EDED;
+    margin-bottom: 30px;
+}
+.formDisplay {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 8%;
+}
+.formDisplay input:focus {
+    border: 1px solid #ff6e79;
+}
+.formDisplay input:hover {
+    border: 1px solid #ff6e79;
+}
+.formDisplay h5 {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 100;
+    width: 100%;
+    height: 28px;
+    background-color: #E8EDED;
+    padding-left: 10px;
+}
+.formDisplay form {
+    width: 45%;
+}
+.formDisplay input {
+    border: 1px solid gray;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+.formDisplay input[type='text'], .formDisplay input[type='number'] {
+    font-family: cursive;
+    font-size: 15px;
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+.formDisplay form[name='rd1'], form[name='rd2'] {
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.formDisplay label {
+    margin-right: 40px;
+}
+.streetHouse {
+    width: 102%;
+    display: flex;
+    justify-content: space-between;
+}
+input[name='street'] {
+    width: 65%;
+}
+input[name='numberHouse'] {
+    width: 20%;
+}
+input[name='commentOrder'], input[name='commentAddress'] {
+    height: 80px;
+}
+.floorFlat {
+    width: 102%;
+    display: flex;
+    justify-content: space-between;
+}
+.floorFlat input {
+    width: 18%;
+}
+select[name="city"] {
+    width: 100%;
+    color: gray;
+    height: 40px;
+    font-size: 15px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+.otherMain{
+    width: 45%;
+}
+.otherFlex, .otherFlex div {
+    display: flex;
+    justify-content: space-between;
+}
+.otherFlex div {
+    width: 30%;
+}
+
+.product {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 5px;
+}
+form[name='form2'] {
+    width: 100%;
+}
+input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    margin-bottom: 40px;
+}
+.callMe {
+    font-size: 20px;
+    margin-left: 5px;
+}
+.total {
+    text-align: right;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.btnOther {
+    display: flex;
+    justify-content: right;
+}
+input[type="button"] {
+    width: 25%;
+    height: 40px;
+    color: white;
+    font-size: 20px;
+    font-family: cursive;
+    background-color: #ff6e79;
+    border: 1px solid #ff6e79;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out
+}
+input[type="button"]:hover {
+    color: #ff6e79;
+    background-color: white;
+}

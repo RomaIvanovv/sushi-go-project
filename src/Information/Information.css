@@ -1,0 +1,30 @@
+.informationAll {
+    padding: 10px 18%;
+    text-align: left;
+    max-width: 80%;
+}
+.information {
+    max-height: 240px;
+    overflow: hidden;
+    transition: all 1.5s ease-in-out;
+}
+.informationAll h1 {
+    font-size: 34px;
+}
+.information p {
+    font-size: 18px;
+}
+.information.active {
+    max-height: 700px;
+}
+.btnHide {
+    border: none;
+    background-color: white;
+    font-size: 18px;
+    font-family: cursive;
+    padding: 20px 0;
+    cursor: pointer;
+}
+.btnHide:hover {
+    color: #ff6e79;
+}

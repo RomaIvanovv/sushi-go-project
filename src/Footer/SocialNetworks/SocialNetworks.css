@@ -1,0 +1,72 @@
+.posterSocial {
+    width: 22%;
+}
+.poster {
+    margin-bottom: 30px;
+}
+.poster img {
+    width: 100px;
+    margin-bottom: -25px;
+}
+.poster h1 {
+    text-align: left;
+    font-size: 50px;
+    margin: 0;
+}
+.poster h4 {
+    margin: 0;
+    font-size: 21px;
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+}
+.social a i {
+    width: 50px;
+    height: 50px;
+    border-radius: 7px;
+    background-color: white;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    transition: 0.3s ease-in-out 
+}
+.facebook a i {
+    color: rgb(55, 55, 247);
+}
+.mail a i {
+    color: orange;
+}
+.instagram a i {
+    color: rgb(240, 25, 240);
+}
+.youtube a i {
+    color: red;
+}
+
+.facebook, .mail, .instagram, .tiktok, .youtube {
+    transition: 0.5s ease-in-out 
+}
+.facebook a i:hover {
+    background-color: rgb(43, 43, 255);
+    color: white;
+}
+.mail a i:hover {
+    background-color: orange;
+    color: white;
+}
+.instagram a i:hover {
+    background-color: rgb(231, 37, 231);
+    color: white;
+}
+.tiktok a i:hover {
+    background-color: black;
+    color: white;
+}
+.youtube a i:hover {
+    background-color: red;
+    color: white;
+}

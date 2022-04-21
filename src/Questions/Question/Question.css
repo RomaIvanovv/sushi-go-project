@@ -1,0 +1,35 @@
+.questionsItem {
+    border-bottom: 1px solid lightgray;
+    margin: -20px 0;
+}
+.questionsTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+.questionsTitle span {
+    transition: 1.5s ease-in-out;
+}
+.questionsText {
+    max-height: 0;
+    overflow: hidden;
+    transition: 1.5s ease-in-out;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #3b393f;
+}
+.questionsText.show {
+    max-height: 800px;
+}
+
+.questionsTitle h4 {
+    font-weight: 400;
+    margin-bottom: 10px;
+    transition: 0.2s ease-in-out;
+}
+.questionsTitle:hover h4 {
+    color: #ff6e79;
+}
+
