@@ -6,7 +6,7 @@ import PostBasketAdd from './PostBasket/PostBasketAdd/PostBasketAdd';
 
 const BasketYour = (props) => {
 
-    let postsElements = props.dada.postBasket.map( p => <PostBasket 
+    let postsBasketElements = props.dada.postBasket.map( p => <PostBasket 
         imgBasket={p.img} 
         titleBasket={p.title} />)  
 
@@ -15,9 +15,10 @@ const BasketYour = (props) => {
     // const titles = JSON.parse(localStorage.getItem('title'))
     // const total = JSON.parse(localStorage.getItem('total'))
 
+
     return (
         <div className='basketYour'>
-            {/* <PostBasketAdd totalPrice={totalPriceBasket}/> */}
+            {/* <PostBasketAdd titles={props.titles}/> */}
             <h2>Ваше замовлення</h2>
             <div className='formDisplay'>
                 <form name='form1'>
@@ -42,14 +43,14 @@ const BasketYour = (props) => {
                         <input type="text" name="street" placeholder='Вулиця*'/>
                         <input type="number" name="numberHouse" placeholder='№ будинку*'/>
                     </div>
-                    <input type="text" name="commentOrder" placeholder='Коментар до замовлення'/>
+                    <input type="text" name="commentOrder" id='h80' placeholder='Коментар до замовлення'/>
                     <div className='floorFlat'>
-                        <input type="number" name="entrance" placeholder='Під`їзд'/>
-                        <input type="number" name="floor" placeholder='Поверх'/>
-                        <input type="number" name="flat" placeholder='Кв.\ офіс'/>
-                        <input type="number" name="intercom" placeholder='Домофон'/>
+                        <input type="number" name="entrance" id='w20' placeholder='Під`їзд'/>
+                        <input type="number" name="floor" id='w20' placeholder='Поверх'/>
+                        <input type="number" name="flat" id='w20'  placeholder='Кв.\ офіс'/>
+                        <input type="number" name="intercom" id='w20' placeholder='Домофон'/>
                     </div>
-                    <input type="text" name="commentAddress" placeholder='Коментар до адреси'/>
+                    <input type="text" name="commentAddress" id='h80' placeholder='Коментар до адреси'/>
                 </form>
 
                 <div className='otherMain'>
@@ -62,7 +63,7 @@ const BasketYour = (props) => {
                     </div>
 
                     <div className='product'>
-                        {postsElements}
+                        {postsBasketElements}
                     </div>
                     <form name='form2'>
                         <h5>Спосіб оплати</h5>

@@ -18,6 +18,10 @@
     border-bottom: 3px solid #ff6e79;
     color: #ff6e79;
 }
+.infoHover a:hover {
+    border: none;
+    color: black;
+}
 .item a:focus {
     border-bottom: 3px solid #ff6e79;
     color: #ff6e79;

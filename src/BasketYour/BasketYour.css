@@ -56,30 +56,25 @@
 .formDisplay label {
     margin-right: 40px;
 }
-.streetHouse {
-    width: 102%;
+.streetHouse, .floorFlat {
+    width: 103%;
     display: flex;
     justify-content: space-between;
 }
-input[name='street'] {
-    width: 65%;
+.streetHouse input[name='street'] {
+    width: 60%;
 }
-input[name='numberHouse'] {
-    width: 20%;
+.streetHouse input[name='numberHouse'] {
+    width: 30%;
 }
-input[name='commentOrder'], input[name='commentAddress'] {
+#h80 {
     height: 80px;
 }
-.floorFlat {
-    width: 102%;
-    display: flex;
-    justify-content: space-between;
-}
-.floorFlat input {
-    width: 18%;
+#w20 {
+    width: 20%;
 }
 select[name="city"] {
-    width: 100%;
+    width: 103%;
     color: gray;
     height: 40px;
     font-size: 15px;

@@ -3,8 +3,21 @@ import './PostBasket.css';
 
 const PostBasket = (props) => {
 
-    const [count] = useState(1)
-    const [zero] = useState(0)
+    const [count, setCount] = useState(1)
+    const [zero, setZero] = useState(0)
+
+    const plus = () => {
+        setCount(() => count + 1);
+        if (count > 1) {
+            setZero(() => zero + 10);
+        }
+    }
+
+    const minus = () => {
+        if (count > 1) {
+        setCount(() => count - 1);
+        }
+    }
 
 
     return (
@@ -17,9 +30,9 @@ const PostBasket = (props) => {
             </div>
             <div className='width30'>
                 <div>
-                    <span>-</span>
+                    <span onClick={minus}>-</span>
                     <input type="number" name='inputCount' value={count} />
-                    <span>+</span>
+                    <span onClick={plus}>+</span>
                 </div>
                 <div>
                     <p className='red'>

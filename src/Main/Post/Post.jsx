@@ -25,10 +25,10 @@ const Post = (props) => {
         let price = totalPrice;
         localStorage.setItem('price', [price])
 
-        // let img = props.img;
+        let img = props.img;
         // localStorage.setItem('img', [img])
 
-        // let titles = props.title;
+        let titles = props.title;
         // localStorage.setItem('title', [titles])
 
         // localStorage.setItem('total', [count])
@@ -38,13 +38,12 @@ const Post = (props) => {
     }
     // console.log(JSON.parse(localStorage.getItem('title')));
 
-    
+    {/* <ol>{prices.map((item, i) => <li key={item + i}>{item}</li>)}</ol> */}
 
     return (
               <div className='post'>
                 <div>
                     <p>{props.weight} {props.gr}{props.l}</p>
-                    {/* <ol>{prices.map((item, i) => <li key={item + i}>{item}</li>)}</ol> */}
                     <img src={props.img}/>
                 </div>
                     <h2>

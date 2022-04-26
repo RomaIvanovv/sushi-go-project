@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './HeaderMenu.css';
 import { NavLink } from 'react-router-dom';
+import Info from '../Info/Info';
 
 const HeaderMenu = () => {
+    const [isShown, setIsShown] = useState(false)
+    
     return (
         <nav className='HeaderMenu'>
             <div className='item'>
@@ -23,8 +26,14 @@ const HeaderMenu = () => {
             <div className='item'>
                 <NavLink to='/Drinks'>Напої</NavLink>
             </div>
-            <div className='item'>
+            <div className='item infoHover' 
+            onMouseEnter={() => setIsShown(true)}
+            onMouseLeave={() => setIsShown(false)}>
                 <a href="">Інформація</a>
+                {isShown && (
+                    <Info />
+                )}
+                
             </div>
         </nav>
         

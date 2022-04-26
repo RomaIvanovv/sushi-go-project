@@ -16,7 +16,7 @@ const PostBasketAdd = (props) => {
             <div >
                 {/* <img src={img}/> */}
                 <h6>
-                    {/* {titles} */}
+                    {/* {props.titles} */}
                 </h6>
             </div>
             <div>
