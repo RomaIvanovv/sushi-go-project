@@ -4,7 +4,7 @@ import './Post.css'
 
 const Post = (props) => {
     const [count, setCount] = useState(1);
-    const [prices, setPrice] = useState([]);
+    // const [prices, setPrice] = useState([]);
 
     useEffect(() => {
     }, [count])
@@ -25,23 +25,26 @@ const Post = (props) => {
         let price = totalPrice;
         localStorage.setItem('price', [price])
 
-        let img = props.img;
-        localStorage.setItem('img', [img])
+        // let img = props.img;
+        // localStorage.setItem('img', [img])
 
-        let title = props.title;
-        localStorage.setItem('title', [title])
+        // let titles = props.title;
+        // localStorage.setItem('title', [titles])
 
-        localStorage.setItem('total', [count])
-        let addsPrice = [...prices];
-        addsPrice.push(price, title, img, count)
-        setPrice(addsPrice)
+        // localStorage.setItem('total', [count])
+        // let addsPrice = [...prices];
+        // addsPrice.push(price, title, img, count)
+        // setPrice(addsPrice)
     }
+    // console.log(JSON.parse(localStorage.getItem('title')));
+
+    
 
     return (
               <div className='post'>
                 <div>
                     <p>{props.weight} {props.gr}{props.l}</p>
-                    <ol>{prices.map((item, i) => <li key={item + i}>{item}</li>)}</ol>
+                    {/* <ol>{prices.map((item, i) => <li key={item + i}>{item}</li>)}</ol> */}
                     <img src={props.img}/>
                 </div>
                     <h2>
@@ -59,7 +62,7 @@ const Post = (props) => {
                     <div className='price'>{totalPrice} грн</div>
                         <div className='countLessMore'>
                             <span className='less' onClick={minus}>-</span>
-                            <input type="text" value={count}/>
+                            <input type="number" value={count}/>
                             <span className='more' onClick={plus}>+</span>
                         </div>
                     <button onClick={addPrice}>Замовити</button>

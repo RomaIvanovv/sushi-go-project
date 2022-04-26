@@ -26,7 +26,7 @@ function App(props) {
           <Routes>
             <Route path='/Offer' element={<Offer/>} />
 
-            <Route path='/' element={<Roles dada={dada}/>} />
+            <Route path='/sushi-go-project' element={<Roles dada={dada}/>} />
 
             <Route path='/HotRoles' element={<HotRoles dada={dada}/>} />
             

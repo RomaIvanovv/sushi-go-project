@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './PostBasket.css';
-import PostBasketAdd from './PostBasketAdd';
 
 const PostBasket = (props) => {
 
@@ -10,8 +9,6 @@ const PostBasket = (props) => {
 
     return (
         <div className='postBasket'>
-            {/* <PostBasketAdd /> */}
-            {/* {props.prices} */}
             <div className='width40'>
                 <img src={props.imgBasket}/>
                 <h6>
@@ -21,7 +18,7 @@ const PostBasket = (props) => {
             <div className='width30'>
                 <div>
                     <span>-</span>
-                    <input type="text" name='inputCount' value={count} />
+                    <input type="number" name='inputCount' value={count} />
                     <span>+</span>
                 </div>
                 <div>

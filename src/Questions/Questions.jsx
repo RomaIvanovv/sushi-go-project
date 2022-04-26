@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Question from './Question/Question';
 import './Questions.css'
 
 const Questions = (props) => {
 
-    let questions = props.questions.map((p) => <Question 
+    let questions = props.questions.map(p => <Question 
     title={p.title}
     text={p.text} />)
 

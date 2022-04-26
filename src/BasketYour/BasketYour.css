@@ -93,6 +93,8 @@ select[name="city"] {
 .otherFlex, .otherFlex div {
     display: flex;
     justify-content: space-between;
+    padding-right: 3px;
+    padding-left: 15px;
 }
 .otherFlex div {
     width: 30%;

@@ -1,22 +1,29 @@
 import React from 'react';
 import PostBasket from './PostBasket/PostBasket';
 import './BasketYour.css';
+import PostBasketAdd from './PostBasket/PostBasketAdd/PostBasketAdd';
 
 
 const BasketYour = (props) => {
 
     let postsElements = props.dada.postBasket.map( p => <PostBasket 
         imgBasket={p.img} 
-        titleBasket={p.title} />)
+        titleBasket={p.title} />)  
+
+    const totalPriceBasket = JSON.parse(localStorage.getItem('price'))    
+    // const img = JSON.parse(localStorage.getItem('img'))
+    // const titles = JSON.parse(localStorage.getItem('title'))
+    // const total = JSON.parse(localStorage.getItem('total'))
 
     return (
         <div className='basketYour'>
+            {/* <PostBasketAdd totalPrice={totalPriceBasket}/> */}
             <h2>Ваше замовлення</h2>
             <div className='formDisplay'>
                 <form name='form1'>
                     <h5>Спосіб доставки</h5>
                     <form name='rd1'>
-                        <input type="radio" name="rd1" id="rd1" />
+                        <input type="radio" name="rd1" id="rd1" checked/>
                         <label htmlFor="rd1">Доставка</label>
                         <input type="radio" name="rd1" id="rd2" />
                         <label htmlFor="rd2">Самовивіз</label>
@@ -60,7 +67,7 @@ const BasketYour = (props) => {
                     <form name='form2'>
                         <h5>Спосіб оплати</h5>
                         <form name='rd2'>
-                            <input type="radio" name="rd1" id="rd1" />
+                            <input type="radio" name="rd1" id="rd1" checked/>
                             <label htmlFor="rd1">Готівка</label>
                             <input type="radio" name="rd1" id="rd2" />
                             <label htmlFor="rd2">Онлайн</label>
@@ -73,7 +80,7 @@ const BasketYour = (props) => {
                         <input type="checkbox" name="ch1" id="ch1" />
                         <label htmlFor="ch1" className='callMe'>Зателефонуйте мені для уточнення деталей</label>
                         <div className='total'>
-                            Разом:  грн
+                            Разом: {totalPriceBasket} грн
                         </div>
                         <div className='btnOther'>
                             <input type="button" name='button' value="Готово" />
