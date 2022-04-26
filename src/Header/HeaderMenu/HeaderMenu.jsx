@@ -9,7 +9,7 @@ const HeaderMenu = () => {
                 <NavLink to='/Offer'>Акції</NavLink>
             </div>
             <div className='item'>
-                <NavLink to='/sushi-go-project' className='activeLink'>Роли</NavLink>
+                <NavLink to='' className='activeLink'>Роли</NavLink>
             </div>
             <div className='item'>
                 <NavLink to='/HotRoles'>Гарячі роли</NavLink>
