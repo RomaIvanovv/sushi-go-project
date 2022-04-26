@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/sushi-go-project/static/css/main.dd45e5aa.css",
-    "main.js": "/sushi-go-project/static/js/main.98e57996.js",
+    "main.css": "/sushi-go-project/static/css/main.5cb84a31.css",
+    "main.js": "/sushi-go-project/static/js/main.2cea87f3.js",
     "static/media/ginger.png": "/sushi-go-project/static/media/ginger.5b09009008cddce55e74.png",
     "static/media/basketSoy.png": "/sushi-go-project/static/media/basketSoy.889b2fbd25f9726c1923.png",
     "static/media/offer2.png": "/sushi-go-project/static/media/offer2.5de1a2822c8bc6c402f2.png",
@@ -12,11 +12,11 @@
     "static/media/offer4.png": "/sushi-go-project/static/media/offer4.0d5ad7e6fc71fd60216e.png",
     "static/media/delivery.png": "/sushi-go-project/static/media/delivery.417ad00fc7a427d462e1.png",
     "index.html": "/sushi-go-project/index.html",
-    "main.dd45e5aa.css.map": "/sushi-go-project/static/css/main.dd45e5aa.css.map",
-    "main.98e57996.js.map": "/sushi-go-project/static/js/main.98e57996.js.map"
+    "main.5cb84a31.css.map": "/sushi-go-project/static/css/main.5cb84a31.css.map",
+    "main.2cea87f3.js.map": "/sushi-go-project/static/js/main.2cea87f3.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd45e5aa.css",
-    "static/js/main.98e57996.js"
+    "static/css/main.5cb84a31.css",
+    "static/js/main.2cea87f3.js"
   ]
 }
