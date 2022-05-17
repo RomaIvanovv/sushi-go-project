@@ -3,14 +3,16 @@ import './Basket.css';
 import { FaCartArrowDown } from 'react-icons/fa';
 
 
-const Basket = (props) => {
+const Basket = () => {
 
     const [zero] = useState(0);
 
-    const basketPrice = zero + JSON.parse(localStorage.getItem('price'))
+    const others = JSON.parse(localStorage.getItem('others'))
 
-    console.log(JSON.parse(localStorage.getItem('price')));
+    const totalPriceBasket = others.map(item => item.price).reduce((prev, curr) => prev + curr, 0);
 
+    const basketPrice = zero + totalPriceBasket
+    
     return (
         <div className='basket'>
             <i><FaCartArrowDown /></i>

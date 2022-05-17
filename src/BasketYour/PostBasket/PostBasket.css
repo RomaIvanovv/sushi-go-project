@@ -6,8 +6,7 @@
     justify-content: space-between;
 }
 .postBasket img {
-    width: 60px;
-    height: 60px;
+    width: 40%;
 }
 .postBasket div input[name='inputCount'] {
     width: 35px;
@@ -23,6 +22,11 @@
     width: 33%;
     align-items: center;
 }
+.width35 {
+    width: 33%;
+    align-items: center;
+    margin-left: 29%;
+}
 .width40 {
     width: 40%;
     align-items: center;
@@ -32,7 +36,7 @@
     font-weight: 100;
     text-align: left;
 }
-.width30 div span {
+.width30 div span, .width35 div span {
     font-size: 24px;
     cursor: pointer;
 }
@@ -41,4 +45,21 @@
 }
 .red {
     color: red;
+}
+.remove {
+    display: flex;
+    align-items: flex-start;
+    font-size: 22px;
+    font-family: cursive;
+    cursor: pointer;
+    border: none;
+    max-height: 30px;
+    background-color: white;
+    transition: 0.2s ease-in-out
+}
+.remove:hover {
+    color: #ff6e79;
+}
+.addPostBasket.active {
+    display: none;
 }

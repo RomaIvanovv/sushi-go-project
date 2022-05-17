@@ -88,8 +88,8 @@ select[name="city"] {
 .otherFlex, .otherFlex div {
     display: flex;
     justify-content: space-between;
-    padding-right: 3px;
-    padding-left: 15px;
+    padding-right: 8px;
+    padding-left: 30px;
 }
 .otherFlex div {
     width: 30%;
@@ -98,7 +98,7 @@ select[name="city"] {
 .product {
     border: 1px solid gray;
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px;
 }
 form[name='form2'] {
     width: 100%;

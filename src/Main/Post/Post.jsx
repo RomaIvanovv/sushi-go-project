@@ -4,7 +4,7 @@ import './Post.css'
 
 const Post = (props) => {
     const [count, setCount] = useState(1);
-    // const [prices, setPrice] = useState([]);
+    const [others, setOther] = useState(JSON.parse(localStorage.getItem("others")));
 
     useEffect(() => {
     }, [count])
@@ -21,30 +21,38 @@ const Post = (props) => {
         }
     }
 
-    const addPrice = () => {
+    useEffect(() => {
+        let otherItems = localStorage.getItem('others');
+        setOther( JSON.parse(otherItems) || [] )
+    }, [])
+
+    useEffect(() => {
+        localStorage.setItem('others', JSON.stringify(others))
+    }, [others])  
+
+    const addOther = () => {
         let price = totalPrice;
-        localStorage.setItem('price', [price])
-
         let img = props.img;
-        // localStorage.setItem('img', [img])
+        let title = props.title;
 
-        let titles = props.title;
-        // localStorage.setItem('title', [titles])
-
-        // localStorage.setItem('total', [count])
-        // let addsPrice = [...prices];
-        // addsPrice.push(price, title, img, count)
-        // setPrice(addsPrice)
+        setOther([
+            ...others,
+            {
+              id: Date.now(),
+              title: title,
+              img: img,
+              price: price,
+              count: count,
+              completed: false
+            }
+          ])
     }
-    // console.log(JSON.parse(localStorage.getItem('title')));
-
-    {/* <ol>{prices.map((item, i) => <li key={item + i}>{item}</li>)}</ol> */}
 
     return (
               <div className='post'>
                 <div>
                     <p>{props.weight} {props.gr}{props.l}</p>
-                    <img src={props.img}/>
+                    <img src={props.img} alt=''/>
                 </div>
                     <h2>
                         {props.title}
@@ -64,7 +72,7 @@ const Post = (props) => {
                             <input type="number" value={count}/>
                             <span className='more' onClick={plus}>+</span>
                         </div>
-                    <button onClick={addPrice}>Замовити</button>
+                    <button onClick={addOther} others={others}>Замовити</button>
                 </form>
             </div>
     )

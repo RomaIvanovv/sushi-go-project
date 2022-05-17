@@ -1,39 +1,36 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import '../PostBasket.css';
+import {Context} from '../../../Context/Context'
 
-const PostBasketAdd = (props) => {
+const PostBasketAdd = ({img, title, count, price, id}) => {
 
-    // const img = JSON.parse(localStorage.getItem('img'))
-    // const titles = JSON.parse(localStorage.getItem('title'))
-    // const total = JSON.parse(localStorage.getItem('total'))
-    // const price = JSON.parse(localStorage.getItem('price'))
-
-    // console.log(titles)
-    
+    const {removeTodo} = useContext(Context)
+    const cls = ['postBasket'];
 
     return (
-        <div>
-            <div >
-                {/* <img src={img}/> */}
+        <div className={cls.join(' ')}>
+            <div className='width40'>
+                <img src={img} alt=''/>
                 <h6>
-                    {/* {props.titles} */}
+                    {title}
                 </h6>
             </div>
-            <div>
+            <div className='width35'>
                 <div>
                     <span>-</span>
-                    {/* <input type="text" name='inputCount' value={total} /> */}
+                    <input type="number" name='inputCount' value={count} />
                     <span>+</span>
                 </div>
                 <div>
-                    <p >
-                        {props.totalPrice}
+                    <p className='red'>
+                        {price}
                     </p>
                     <p>
                         грн
                     </p>
                 </div>
             </div>
+            <button className='remove' onClick={() => removeTodo(id)}>x</button>
         </div>
     )
 }

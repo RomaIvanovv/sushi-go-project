@@ -1,24 +1,36 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import PostBasket from './PostBasket/PostBasket';
 import './BasketYour.css';
-import PostBasketAdd from './PostBasket/PostBasketAdd/PostBasketAdd';
+import PostBasketAddElements from './PostBasket/PostBasketAdd/PostBasketAddElements';
+import {Context} from '../Context/Context'
 
 
 const BasketYour = (props) => {
 
     let postsBasketElements = props.dada.postBasket.map( p => <PostBasket 
         imgBasket={p.img} 
-        titleBasket={p.title} />)  
+        titleBasket={p.title} 
+    />)
 
-    const totalPriceBasket = JSON.parse(localStorage.getItem('price'))    
-    // const img = JSON.parse(localStorage.getItem('img'))
-    // const titles = JSON.parse(localStorage.getItem('title'))
-    // const total = JSON.parse(localStorage.getItem('total'))
+    const [others, setOther] = useState(JSON.parse(localStorage.getItem("others")));
 
+    useEffect(() => {
+        localStorage.setItem('others', JSON.stringify(others))
+      }, [others])
+
+    const removeTodo = id => {
+        setOther(others.filter( postBasket => {
+          return postBasket.id !== id
+        }))
+    }
+
+    const totalPriceBasket = others.map(item => item.price).reduce((prev, curr) => prev + curr, 0);
 
     return (
+        <Context.Provider value={{
+            removeTodo
+          }}>
         <div className='basketYour'>
-            {/* <PostBasketAdd titles={props.titles}/> */}
             <h2>Ваше замовлення</h2>
             <div className='formDisplay'>
                 <form name='form1'>
@@ -63,6 +75,7 @@ const BasketYour = (props) => {
                     </div>
 
                     <div className='product'>
+                        <PostBasketAddElements others={others} />
                         {postsBasketElements}
                     </div>
                     <form name='form2'>
@@ -92,6 +105,7 @@ const BasketYour = (props) => {
             </div>
 
         </div>
+        </Context.Provider>
     )
 }
 
